@@ -1,0 +1,103 @@
+/* Global rules */
+:root {
+    --mainColor: #10cab7;
+    --secondaryColor: #f6f6f6;
+    --thirdColor: #2c4755;
+    --mainFont: "Work Sans", sans-serif;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: var(--mainFont);
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Header */
+header {
+  padding: 20px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 45px;
+  height: 20px;
+}
+header .links {
+  position: relative;
+}
+header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+header .links .icon {
+  width: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header .links .icon span {
+  background-color: #24484f;
+  margin-bottom: 5px;
+  height: 1px;
+}
+header .links .icon span:first-child {
+  margin-top: 5px;
+  width: 100%;
+}
+header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: .3s;
+}
+header .links .icon span:last-child {
+  width: 100%;
+}
+header .links ul {
+  display: none;
+}
+
+/* Main */
+.main {
+  background-color: var(--secondaryColor);
+  height: 450px;
+}
+.main .container {
+  height: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+.main .container h1 {
+  margin-bottom: 60px;
+  color: var(--mainColor);
+  font-size: 55px;
+  font-weight: 800;
+}
+.main .container p {
+  font-size: 20px;
+  color: var(--thirdColor);
+}
