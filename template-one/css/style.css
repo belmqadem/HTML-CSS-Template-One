@@ -59,15 +59,6 @@ body {
     margin-top: -25px;
   }
 }
-@media (max-width: 991px) {
-    .services .cube-image .cube-i {
-      display: none;
-    }
-    /* .services .container .service-cont .servs-col .srv i {
-      left: 60px;
-      top: 0;
-    } */
-}
 i {
   color: var(--mainColor);
 }
@@ -214,29 +205,44 @@ header .links ul a:hover {
 
 /* Services */
 .services {
-  padding: 90px 0;
+  padding: 60px 0;
 }
-.services .container .service-cont {
-  padding-top: 90px;
-  padding-bottom: 60px;
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.services .services-content .srv {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-bottom: 40px;
 }
-.services .container .service-cont .servs-col .srv {
-  padding-bottom: 20px;
-  max-width: 300px;
-  position: relative;
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-.services .container .service-cont .servs-col .srv i {
-  position: absolute;
-  left: -50px;
+.services .services-content .srv i {
+  color: var(--mainColor);
+  flex-basis: 60px;
 }
-.services .container .service-cont .servs-col .srv .text p {
+.services .services-content .srv .text {
+  flex: 1;
+}
+.services .services-content .srv .text h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2021;
+  font-weight: 800;
+}
+.services .services-content .srv .text p {
   font-size: 15px;
   color: #4d4c4c;
   line-height: 1.6;
 }
+
+
 .services .cube-image .cube-i {
   width: 300px;
   height: 300px;
@@ -252,4 +258,9 @@ header .links ul a:hover {
   top: -50px;
   right: -38px;
   z-index: -1;
+}
+@media (max-width: 1199px) {
+  .image-col {
+    display: none;
+  }
 }
