@@ -59,6 +59,15 @@ body {
     margin-top: -25px;
   }
 }
+@media (max-width: 991px) {
+    .services .cube-image .cube-i {
+      display: none;
+    }
+    /* .services .container .service-cont .servs-col .srv i {
+      left: 60px;
+      top: 0;
+    } */
+}
 i {
   color: var(--mainColor);
 }
@@ -173,7 +182,7 @@ header .links ul a:hover {
 
 /* Features */
 .features {
-  padding: 60px 0;
+  padding: 90px 0;
   background-color: var(--secondaryColor);
 }
 .features .container {
@@ -205,15 +214,29 @@ header .links ul a:hover {
 
 /* Services */
 .services {
-  padding: 60px 0;
+  padding: 90px 0;
 }
 .services .container .service-cont {
-  /* background-color: #ddd; */
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 5px;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
+.services .container .service-cont .servs-col .srv {
+  padding-bottom: 20px;
+  max-width: 300px;
+  position: relative;
+}
+.services .container .service-cont .servs-col .srv i {
+  position: absolute;
+  left: -50px;
+}
+.services .container .service-cont .servs-col .srv .text p {
+  font-size: 15px;
+  color: #4d4c4c;
+  line-height: 1.6;
+}
 .services .cube-image .cube-i {
   width: 300px;
   height: 300px;
